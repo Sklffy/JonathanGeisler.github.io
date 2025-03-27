@@ -175,6 +175,13 @@ nav {
     width: 100%;
 }
 
+.hero h1 span {
+    display: inline-block;
+    min-width: 12ch; /* enough to fit "Jonathan Geisler" */
+    text-align: left;
+}
+
+
 .hero-image {
     width: 100%;
     height: auto;
