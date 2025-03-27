@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Hacker-style text scramble effect
     const heroNameElement = document.querySelector('.hero h1 span');
-    const originalText = "Josiah Leaman";
+    const originalText = "Jonathan Geisler";
     heroNameElement.textContent = originalText;
     
     // Characters to use for scrambling
