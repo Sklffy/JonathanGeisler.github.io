@@ -55,17 +55,19 @@ body {
     display: inline-block;
 }
 
-.hero h1 span::after {
-    content: '';
-    position: absolute;
-    right: -15px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 10px;
-    height: 20px;
-    background-color: var(--primary-color);
-    animation: cursor-blink 1s infinite;
+#cursor {
+    display: inline-block;
+    margin-left: 5px;
+    animation: blink 1s step-end infinite;
+    color: var(--primary-color);
+    font-weight: bold;
 }
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
 
 @keyframes cursor-blink {
     0%, 100% { opacity: 1; }
