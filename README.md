@@ -40,7 +40,7 @@ A Matrix-themed competition scoreboard with TOML-based scoring for SSH, FTP, DNS
 ## 📫 Contact Me
 
 - 📧 Email: jdgeisler@gmail.com
-- 🧑‍💼 LinkedIn: [linkedin.com/in/jonathangeisler](https://linkedin.com/in/jonathangeisler)
+- 🧑‍💼 LinkedIn: [linkedin.com/in/jdgeisler](https://www.linkedin.com/in/jdgeisler/)
 - 💻 GitHub: [github.com/Sklffy](https://github.com/Sklffy)
 
 ---
