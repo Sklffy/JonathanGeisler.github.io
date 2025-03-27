@@ -51,9 +51,15 @@ body {
 }
 
 .hero h1 span {
-    position: relative;
     display: inline-block;
+    min-width: 15ch;
+    max-width: 15ch;
+    height: 2.6rem;
+    overflow: hidden;
+    text-align: left;
+    white-space: nowrap;
 }
+
 
 #cursor {
     display: inline-block;
