@@ -279,7 +279,7 @@ nav {
 }
 
 .download-btn::before {
-    content: "📄";
+    content: "\1F4C4";
     font-size: 1.1em;
 }
 
