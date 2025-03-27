@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // Text scramble effect
+    // Text Scramble Animation
     const heroNameElement = document.querySelector('.hero h1 span');
     const originalText = "Jonathan Geisler";
     const scrambleChars = "!<>-_\\/[]{}—=+*^?#________";
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const maxLength = originalText.length;
 
         const interval = setInterval(() => {
-            heroNameElement.textContent = originalText
+            const scrambled = originalText
                 .split("")
                 .map((char, idx) => {
                     if (idx < iteration) return originalText[idx];
@@ -61,25 +61,21 @@ document.addEventListener('DOMContentLoaded', function () {
                 })
                 .join("");
 
-            iteration += 1 / 3;
+            heroNameElement.textContent = scrambled;
+
+            iteration += 1 / 2;
 
             if (iteration >= maxLength) {
                 clearInterval(interval);
                 heroNameElement.textContent = originalText;
-
-                // Loop again after a pause
-                setTimeout(() => {
-                    textScramble();
-                }, 3000);
+                setTimeout(textScramble, 3000); // Restart loop
             }
         }, 30);
     }
 
     if (heroNameElement) {
-        setTimeout(() => {
-            heroNameElement.textContent = originalText;
-            textScramble();
-        }, 1500);
+        heroNameElement.textContent = originalText;
+        setTimeout(() => textScramble(), 1500);
     }
 
     // Theme color switching
@@ -134,7 +130,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.body.style.fontSize = currentFontSize + 'px';
     }
 
-    // Scroll animation
+    // Scroll reveal animations
     function revealOnScroll() {
         const elements = document.querySelectorAll('.project-card, .section-header, .contact-info');
         elements.forEach(el => {
