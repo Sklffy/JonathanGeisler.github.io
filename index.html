@@ -1,159 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jonathan Geisler - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jonathan Geisler - Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <nav>
-                <div class="logo">Jonathan Geisler</div>
-                <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <!-- Matrix Canvas Background -->
+  <canvas id="matrixCanvas" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; opacity: 0.15;"></canvas>
 
-    <!-- Security Badge Icon -->
-    <div id="securityBadge" style="position: fixed; top: 10px; right: 10px; z-index: 1000;">
-        <svg width="80" height="80" viewBox="0 0 80 80">
-            <defs>
-                <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-                    <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur" />
-                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="glow" />
-                    <feBlend in="SourceGraphic" in2="glow" mode="screen" />
-                </filter>
-            </defs>
-            <path class="badge-color" d="M40 10 L60 20 L60 40 C60 52 52 62 40 70 C28 62 20 52 20 40 L20 20 Z" fill="var(--primary-color)" filter="url(#glow)" />
-            <path d="M40 20 L50 25 L50 40 C50 48 46 54 40 60 C34 54 30 48 30 40 L30 25 Z" fill="#101010" />
-            <path class="badge-color" d="M40 25 L45 28 L45 40 C45 45 43 50 40 52 C37 50 35 45 35 40 L35 28 Z" fill="var(--primary-color)" />
-            <rect x="37" y="38" width="6" height="8" rx="1" fill="#101010" />
-            <rect x="34" y="34" width="12" height="6" rx="2" fill="#101010" />
-            <rect x="39" y="36" width="2" height="4" fill="var(--primary-color)" class="badge-color" />
-        </svg>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">Jonathan Geisler</div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
 
-    <!-- Matrix Canvas Background -->
-    <canvas id="matrixCanvas" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; opacity: 0.15;"></canvas>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content-wrapper">
-                <div class="hero-text-box">
-                    <h1>Hi, I'm <span style="color: var(--primary-color);">Jonathan Geisler</span></h1>
-                    <p>A passionate learner specializing in Cyber Security.</p>
-                    <a href="#contact" class="btn">Get in Touch</a>
-                </div>
-                <div class="hero-image-container">
-                    <div class="hero-image-wrapper">
-                        <img src="Jonathan.png" alt="Jonathan Geisler" class="hero-image">
-                    </div>
-                </div>
-            </div>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content-wrapper">
+        <div class="hero-text-box">
+          <h1>Hi, I'm <span>Jonathan Geisler</span></h1>
+          <p>A passionate learner specializing in Cyber Security.</p>
+          <a href="#contact" class="btn">Get in Touch</a>
         </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2>About Me</h2>
-                <p>A little bit about me</p>
-            </div>
-            <div style="max-width: 800px; margin: 0 auto;">
-                <p>I am currently pursuing a degree in Computer Science with a focus on Cyber Security. I enjoy solving complex problems, working in both team and solo environments, and seeking new opportunities to grow. I'm looking for internships or roles that align with cyber security, development, and innovative tech.</p>
-
-                <div style="margin-top: 40px;">
-                    <h3>My Skills</h3>
-                    <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px;">
-                        <span class="skill-badge">Cyber</span>
-                        <span class="skill-badge">Networking</span>
-                        <span class="skill-badge">Python</span>
-                        <span class="skill-badge">C++</span>
-                        <span class="skill-badge">Linux</span>
-                        <span class="skill-badge">Problem Solving</span>
-                    </div>
-                </div>
-            </div>
+        <div class="hero-image-container">
+          <div class="hero-image-wrapper">
+            <img src="Jonathan.png" alt="Jonathan Geisler" class="hero-image" />
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section" style="background-color: var(--secondary-color);">
-        <div class="container">
-            <div class="section-header">
-                <h2>My Projects</h2>
-                <p>What I've Been Up To</p>
-            </div>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <img src="networkSec.jpeg" alt="IDS/IPS Linux Security Analysis" class="project-img">
-                    <div class="project-content">
-                        <h3>IDS/IPS Linux Security Analysis</h3>
-                        <p>This project evaluates IDS and IPS solutions in Linux servers through penetration testing to assess their effectiveness against attacks and provide deployment recommendations.</p>
-                        <div class="project-links">
-                            <a href="linux cyber project.pdf" download class="download-btn" style="background-color: #007BFF;">Download Report</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>About Me</h2>
+        <p>A little bit about me</p>
+      </div>
+      <div style="max-width: 800px; margin: 0 auto;">
+        <p>
+          I am currently pursuing a degree in Computer Science with a focus on Cyber Security.
+          I enjoy solving complex problems, working in both team and solo environments, and seeking new opportunities to grow.
+          I'm looking for internships or roles that align with cyber security, development, and innovative tech.
+        </p>
+
+        <div style="margin-top: 40px;">
+          <h3>My Skills</h3>
+          <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px;">
+            <span class="skill-badge">Cyber</span>
+            <span class="skill-badge">Networking</span>
+            <span class="skill-badge">Python</span>
+            <span class="skill-badge">C++</span>
+            <span class="skill-badge">Linux</span>
+            <span class="skill-badge">Problem Solving</span>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Get In Touch</h2>
-                <p>Interested in working together? Feel free to reach out!</p>
+  <!-- Projects Section -->
+  <section id="projects" class="section" style="background-color: var(--secondary-color);">
+    <div class="container">
+      <div class="section-header">
+        <h2>My Projects</h2>
+        <p>What I've Been Up To</p>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card">
+          <img src="networkSec.jpeg" alt="IDS/IPS Linux Security Analysis" class="project-img" />
+          <div class="project-content">
+            <h3>IDS/IPS Linux Security Analysis</h3>
+            <p>This project evaluates IDS and IPS solutions in Linux servers through penetration testing.</p>
+            <div class="project-links">
+              <a href="linux cyber project.pdf" class="download-btn" download>Download Report</a>
             </div>
-            <div class="contact-info">
-                <h3>My Email Addresses</h3>
-                <div class="email-container">
-                    <h4>Professional</h4>
-                    <a href="mailto:Jdgeisler@gmail.com" class="email-link">Jdgeisler@gmail.com</a>
-                </div>
-                <div class="email-container">
-                    <h4>Academic</h4>
-                    <a href="mailto:jgeisler6@gmail.com" class="email-link">jgeisler6@gmail.com</a>
-                </div>
-            </div>
-
-            <div class="social-links">
-                <a href="https://github.com/JonathanGeisler" target="_blank" title="GitHub">GitHub</a>
-                <a href="https://linkedin.com/in/jonathangeisler" target="_blank" title="LinkedIn">LinkedIn</a>
-            </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p class="footer-text">© 2025 Jonathan Geisler. All Rights Reserved.</p>
-            <div class="theme-controls">
-                <h4>Customize Theme</h4>
-                <div class="color-buttons">
-                    <button class="theme-btn" data-color="#007BFF" style="background-color: #007BFF;"></button>
-                    <button class="theme-btn" data-color="#00CED1" style="background-color: #00CED1;"></button>
-                    <button class="theme-btn" data-color="#9932CC" style="background-color: #9932CC;"></button>
-                    <button class="theme-btn" data-color="#32CD32" style="background-color: #32CD32;"></button>
-                </div>
-                <div class="font-size-controls">
-                    <button id="fontSizeDecrease" class="btn">A-</button>
-                    <button id="fontSizeIncrease" class="btn">A+</button>
-                </div>
-            </div>
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Get In Touch</h2>
+        <p>Interested in working together? Feel free to reach out!</p>
+      </div>
+      <div class="contact-info">
+        <h3>My Email Addresses</h3>
+        <div class="email-container">
+          <h4>Professional</h4>
+          <a href="mailto:Jdgeisler@gmail.com" class="email-link">Jdgeisler@gmail.com</a>
         </div>
-    </footer>
+        <div class="email-container">
+          <h4>Academic</h4>
+          <a href="mailto:jgeisler6@gmail.com" class="email-link">jgeisler6@gmail.com</a>
+        </div>
+      </div>
 
-    <script src="script.js"></script>
+      <div class="social-links">
+        <a href="https://github.com/JonathanGeisler" target="_blank" title="GitHub">GitHub</a>
+        <a href="https://linkedin.com/in/jonathangeisler" target="_blank" title="LinkedIn">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p class="footer-text">© 2025 Jonathan Geisler. All Rights Reserved.</p>
+      <div class="theme-controls">
+        <h4>Customize Theme</h4>
+        <div class="color-buttons">
+          <button class="theme-btn" data-color="#8B0000" style="background-color: #8B0000;"></button>
+          <button class="theme-btn" data-color="#00CED1" style="background-color: #00CED1;"></button>
+          <button class="theme-btn" data-color="#9932CC" style="background-color: #9932CC;"></button>
+          <button class="theme-btn" data-color="#32CD32" style="background-color: #32CD32;"></button>
+        </div>
+        <div class="font-size-controls">
+          <button id="fontSizeDecrease" class="btn">A-</button>
+          <button id="fontSizeIncrease" class="btn">A+</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
 </body>
 </html>
