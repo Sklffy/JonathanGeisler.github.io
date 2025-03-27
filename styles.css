@@ -143,6 +143,7 @@ nav {
 .hero-content-wrapper {
     display: flex;
     justify-content: space-between;
+    min-height: 400px; /* adjust based on your layout */
     align-items: center;
     width: 100%;
     gap: 40px;
