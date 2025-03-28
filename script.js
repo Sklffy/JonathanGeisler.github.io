@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Terminal Typewriter Login Animation
 const lines = [
-    "> Login: jonathan.geisler",
+    "> Login: Jonathan Geisler",
     "> Password: ********",
     "> Access granted..."
 ];
