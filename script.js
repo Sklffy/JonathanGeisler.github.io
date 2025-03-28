@@ -43,40 +43,33 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // Text Scramble Animation
-    const heroNameElement = document.querySelector('.hero h1 span');
-    const originalText = "Jonathan Geisler";
-    const scrambleChars = "!<>-_\\/[]{}—=+*^?#________";
+// Terminal Typewriter Login Animation
+const lines = [
+    "> Login: jonathan.geisler",
+    "> Password: ********",
+    "> Access granted..."
+];
 
-    function textScramble() {
-        let iteration = 0;
-        const maxLength = originalText.length;
+const delay = (ms) => new Promise(res => setTimeout(res, ms));
 
-        const interval = setInterval(() => {
-            const scrambled = originalText
-                .split("")
-                .map((char, idx) => {
-                    if (idx < iteration) return originalText[idx];
-                    return scrambleChars[Math.floor(Math.random() * scrambleChars.length)];
-                })
-                .join("");
-
-            heroNameElement.textContent = scrambled;
-
-            iteration += 1 / 2;
-
-            if (iteration >= maxLength) {
-                clearInterval(interval);
-                heroNameElement.textContent = originalText;
-                setTimeout(textScramble, 3000); // Restart loop
-            }
-        }, 30);
+async function typeLine(id, text, delayMs = 40) {
+    const el = document.getElementById(id);
+    for (let i = 0; i < text.length; i++) {
+        el.textContent += text[i];
+        await delay(delayMs);
     }
+}
 
-    if (heroNameElement) {
-        heroNameElement.textContent = originalText;
-        setTimeout(() => textScramble(), 1500);
-    }
+async function animateLoginPrompt() {
+    await typeLine("line1", lines[0]);
+    await delay(500);
+    await typeLine("line2", lines[1]);
+    await delay(500);
+    await typeLine("line3", lines[2]);
+}
+
+animateLoginPrompt();
+
 
     // Theme color switching
     const themeButtons = document.querySelectorAll('.theme-btn');
