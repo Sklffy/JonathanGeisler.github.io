@@ -376,18 +376,31 @@ nav {
 }
 
 .project-card {
-    background-color: #181818; /* Dark gray */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #181818;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-    transition: transform 0.3s ease;
     border: 1px solid #333;
     width: 100%;
     max-width: 400px;
+    transition: transform 0.3s ease;
+    height: 100%; /* Ensure cards grow evenly */
 }
 
 .project-card:hover {
     transform: translateY(-10px);
+}
+
+.project-preview-img {
+    max-height: 200px;
+    width: 100%;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 15px;
+    filter: drop-shadow(0 0 5px #00ff66);
 }
 
 .project-img {
@@ -398,8 +411,11 @@ nav {
   filter: drop-shadow(0 0 5px #00ff66); /* optional glowing effect */
 }
 
-
 .project-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
     padding: 20px;
 }
 
@@ -408,9 +424,11 @@ nav {
 }
 
 .project-content p {
-  color: #d0ffd0; /* Soft greenish white for readability */
-  margin-bottom: 15px;
-  text-shadow: none;
+    flex-grow: 1; /* Pushes buttons to the bottom */
+    min-height: 100px; /* Ensures height consistency */
+    color: #d0ffd0;
+    margin-bottom: 15px;
+    text-shadow: none;
 }
 
 .project-links {
