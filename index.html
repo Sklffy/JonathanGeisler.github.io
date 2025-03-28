@@ -6,99 +6,10 @@
   <title>Jonathan Geisler - Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <style>
-    body {
-      background: #000;
-      overflow-x: hidden;
-      margin: 0;
-      height: 100vh;
-    }
-
-    .matrix-container {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      z-index: 2;
-      text-align: center;
-    }
-
-    .matrix-text {
-      color: #0f0;
-      font-size: 80px;
-      font-family: monospace;
-      position: relative;
-      text-shadow: 0 0 10px #0f0, 0 0 20px #0f0, 0 0 30px #0f0;
-      z-index: 2;
-    }
-
-    .matrix-text::before {
-      content: attr(data-text);
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      animation: glitch 2s infinite;
-      clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
-      transform: translate(-2px, -2px);
-      color: #0f0;
-      text-shadow: 0 0 5px #0f0, 0 0 15px #0f0;
-    }
-
-    .rain {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: repeating-linear-gradient(
-        0deg,
-        rgba(0, 255, 0, 0.1) 0,
-        rgba(0, 255, 0, 0.2) 2px,
-        transparent 4px
-      );
-      animation: rain 10s linear infinite;
-      z-index: 1;
-    }
-
-    @keyframes rain {
-      0% { transform: translateY(-100%); }
-      100% { transform: translateY(100%); }
-    }
-
-    @keyframes glitch {
-      0%, 100% {
-        clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
-        transform: translate(0);
-      }
-      33% {
-        clip-path: polygon(0 0, 100% 0, 100% 15%, 0 15%);
-        transform: translate(-5px, -5px);
-      }
-      66% {
-        clip-path: polygon(0 85%, 100% 85%, 100% 100%, 0 100%);
-        transform: translate(5px, 5px);
-      }
-    }
-  </style>
 </head>
 <body>
-  <div class="rain"></div>
-
-  <!-- Matrix Hero Section -->
-<section class="hero">
-  <div class="container">
-    <div class="hero-content-wrapper matrix-container">
-      <h1 class="matrix-text" data-text="Jonathan Geisler">Jonathan Geisler</h1>
-      <p class="matrix-sub">A passionate learner specializing in Cyber Security.</p>
-      <a href="#contact" class="btn">Get in Touch</a>
-      <div class="rain"></div>
-    </div>
-  </div>
-</section>
+  <!-- Matrix Canvas Background -->
+  <canvas id="matrixCanvas" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; opacity: 0.15;"></canvas>
 
   <!-- Header -->
   <header>
