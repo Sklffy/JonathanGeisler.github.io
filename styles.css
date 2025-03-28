@@ -125,7 +125,10 @@ body {
   padding: 20px;
   font-family: 'Courier New', Courier, monospace;
   color: #00ff66;
-  box-shadow: 0 0 5px #00ff66, 0 0 10px #00ff66, 0 0 20px #00ff66;
+  box-shadow:
+    0 0 8px #00ff66,
+    0 0 20px #00ff66,
+    0 0 30px #00ff66;
   margin-bottom: 20px;
 }
 
@@ -141,6 +144,7 @@ body {
   width: 10px;
   animation: blink 1s infinite step-end;
   color: #00ff66;
+  text-shadow: 0 0 8px #00ff66;
 }
 
 
