@@ -21,10 +21,17 @@ I participate in competitions like:
 ---
 
 ## 🚀 Projects
+🔒 DWAYNE-INATOR-5000 Custom Scoreboard & Proxmox Cyber Range
+A fully customized, Matrix-themed CTF scoreboard built for the DWAYNE-INATOR-5000, complete with glowing UI elements, animated Matrix canvas background, and dark red hacker aesthetics. Uses TOML-based configuration to score SSH, FTP, DNS, and Web services in real time.
 
-### 🔒 DWAYNE-INATOR-5000 Custom Scoreboard
-A Matrix-themed competition scoreboard with TOML-based scoring for SSH, FTP, DNS, and Web service checks.
-[View on GitHub](https://github.com/JimmyJonnyBonny/Scoreboard)
+Hosted on a Proxmox-powered datacenter running on my personal machine (AMD Ryzen 9 5950X, 96GB RAM, 20TB storage, RTX 3090 Ti).
+
+Scoring engine deployed in LXC containers with ZeroTier for remote connectivity.
+Integrated with custom Linux VMs ("deimos" and "eris") and real-world service configurations.
+GitHub-hosted, easily replicable, and styled to match a cyberpunk-themed competition aesthetic.
+
+🔗 View Scoreboard on GitHub
+https://github.com/JimmyJonnyBonny/Scoreboard
 
 ---
 
