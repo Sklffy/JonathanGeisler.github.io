@@ -181,10 +181,16 @@ nav {
 }
 
 .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: var(--primary-color);
+  font-size: 24px;
+  font-weight: bold;
+  color: #00ff00;
+  font-family: 'Courier New', Courier, monospace;
+  text-shadow:
+    0 0 5px #00ff00,
+    0 0 10px #00ff00,
+    0 0 20px #00ff00;
 }
+
 
 .nav-links {
     display: flex;
