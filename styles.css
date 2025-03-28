@@ -71,6 +71,35 @@ body {
     letter-spacing: 1px;
 }
 
+.terminal-login-box {
+  background-color: #000;
+  border: 2px solid #0f0;
+  border-radius: 10px;
+  padding: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  color: #0f0;
+  box-shadow: 0 0 20px #0f0;
+  margin-bottom: 20px;
+}
+
+.terminal-line {
+  margin: 5px 0;
+  font-size: 18px;
+}
+
+.cursor {
+  display: inline-block;
+  width: 10px;
+  animation: blink 1s infinite step-end;
+  color: #0f0;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+
 .hero h1 span::after {
     content: '';
     position: absolute;
