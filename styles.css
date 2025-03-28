@@ -376,8 +376,9 @@ nav {
 }
 
 .project-content p {
-    color: var(--dark-gray);
-    margin-bottom: 15px;
+  color: #d0ffd0; /* Soft greenish white for readability */
+  margin-bottom: 15px;
+  text-shadow: none;
 }
 
 .project-links {
