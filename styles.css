@@ -21,12 +21,6 @@
 }
 
 
-.download-btn:hover {
-    background-color: #620000;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
-}
-
 :root {
   --primary-color: #00b200; /* Neon Green */
   --secondary-color: #111d11; /* Cyber-green black */
@@ -237,13 +231,6 @@ nav {
     display: flex;
     list-style: none;
 }
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 20px 0;
-}
 
 
 .nav-links li {
@@ -266,6 +253,18 @@ nav {
 
 
 /* Hero Section */
+
+.hero-glitch,
+.glitch-logo {
+  position: relative;
+  z-index: 2;
+}
+
+.navbar, .nav-links {
+  z-index: 10;
+  position: relative;
+}
+
 .hero {
     min-height: 100vh;
     display: flex;
