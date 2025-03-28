@@ -23,13 +23,14 @@
 }
 
 :root {
-    --primary-color: #8B0000; /* Dark Red */
-    --secondary-color: #121212; /* Nearly Black */
-    --text-color: #E0E0E0; /* Light Gray for text */
-    --light-gray: #2A2A2A; /* Darker Gray */
-    --dark-gray: #A0A0A0; /* Medium Gray */
-    --terminal-font: 'Courier New', Courier, monospace;
+  --primary-color: #00ff6a; /* Neon Green */
+  --secondary-color: #121212;
+  --text-color: #E0E0E0;
+  --light-gray: #2A2A2A;
+  --dark-gray: #A0A0A0;
+  --terminal-font: 'Courier New', Courier, monospace;
 }
+
 
 * {
     margin: 0;
