@@ -400,7 +400,7 @@ nav {
     object-fit: contain;
     display: block;
     margin: 0 auto 15px;
-    filter: drop-shadow(0 0 5px #00ff66);
+    filter: drop-shadow(0 0 5px #00b200);
 }
 
 .project-img {
@@ -408,7 +408,7 @@ nav {
   height: auto;
   display: block;
   margin-bottom: 15px;
-  filter: drop-shadow(0 0 5px #00ff66); /* optional glowing effect */
+  filter: drop-shadow(0 0 5px #00b200); /* optional glowing effect */
 }
 
 .project-content {
