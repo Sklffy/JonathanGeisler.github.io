@@ -119,34 +119,32 @@ body {
 }
 
 .terminal-login-box {
-  background-color: #000;
-  border: 2px solid #00ff66;
-  border-radius: 10px;
+  background-color: #000000;
+  border: 2px solid #00ffff;
+  border-radius: 8px;
   padding: 20px;
   font-family: 'Courier New', Courier, monospace;
-  color: #00ff66;
-  box-shadow: 
-    0 0 10px #00ff66, 
-    0 0 20px #00ff66, 
-    0 0 40px #00ff66;
+  color: #00ffff;
   margin-bottom: 20px;
 }
 
 .terminal-line {
-  margin: 5px 0;
+  margin: 6px 0;
   font-size: 18px;
-  color: #00ff66;
-  text-shadow: 
-    0 0 5px #00ff66,
-    0 0 10px #00ff66;
+  font-weight: bold;
 }
 
+/* Color customization */
+.terminal-line.login { color: #00ffff; }
+.terminal-line.password { color: #00ff00; }
+.terminal-line.access { color: #ff0000; }
+
+/* Cursor stays simple */
 .cursor {
   display: inline-block;
   width: 10px;
   animation: blink 1s infinite step-end;
-  color: #00ff66;
-  text-shadow: 0 0 8px #00ff66;
+  color: #ffffff;
 }
 
 @keyframes blink {
