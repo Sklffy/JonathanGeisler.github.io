@@ -95,26 +95,29 @@ body {
 
 .terminal-login-box {
   background-color: #000;
-  border: 2px solid #0f0;
+  border: 2px solid #00ff66;
   border-radius: 10px;
   padding: 20px;
   font-family: 'Courier New', Courier, monospace;
-  color: #0f0;
-  box-shadow: 0 0 20px #0f0;
+  color: #00ff66;
+  box-shadow: 0 0 5px #00ff66, 0 0 10px #00ff66, 0 0 20px #00ff66;
   margin-bottom: 20px;
 }
 
 .terminal-line {
-  margin: 5px 0;
+  margin: 8px 0;
   font-size: 18px;
+  color: #00ff66;
+  text-shadow: 0 0 5px #00ff66, 0 0 10px #00ff66;
 }
 
 .cursor {
   display: inline-block;
   width: 10px;
   animation: blink 1s infinite step-end;
-  color: #0f0;
+  color: #00ff66;
 }
+
 
 @keyframes blink {
   0%, 100% { opacity: 1; }
