@@ -31,10 +31,19 @@
   --terminal-font: 'Courier New', Courier, monospace;
 }
 
+/* Base styles */
 body {
-  background-color: var(--dark-gray);
+  background-color: var(--background-dark);
   color: var(--text-color);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+/* Ensure all headings and paragraphs are visible */
+h1, h2, h3, h4, p, span, a, .skill-badge {
+  color: var(--text-color);
+  text-shadow: none;
+}
+
 
 .project-card, .hero-text-box {
   background-color: var(--light-gray);
