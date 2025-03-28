@@ -109,13 +109,14 @@ body {
 
 .terminal-login-box {
   background-color: #000000;
-  border: 2px solid #00B200;
+  border: 2px solid var(--primary-color);
   border-radius: 8px;
   padding: 20px;
   font-family: 'Courier New', Courier, monospace;
-  color: #00B200;
+  color: var(--primary-color);
   margin-bottom: 20px;
 }
+
 
 .terminal-line {
   margin: 6px 0;
@@ -223,12 +224,12 @@ nav {
 .logo {
   font-size: 24px;
   font-weight: bold;
-  color: #00B200;
+  color: var(--primary-color);
   font-family: 'Courier New', Courier, monospace;
   text-shadow:
-    0 0 5px #00B200,
-    0 0 10px #00B200,
-    0 0 20px #00B200;
+    0 0 5px var(--primary-color),
+    0 0 10px var(--primary-color),
+    0 0 20px var(--primary-color);
 }
 
 
@@ -242,11 +243,12 @@ nav {
 }
 
 .nav-links a {
-  color: #00B200; /* Neon green */
+  color: var(--primary-color); /* Unified green */
   font-weight: 600;
-  text-shadow: 0 0 5px #00B200, 0 0 10px #00B200, 0 0 20px #00B200;
+  text-shadow: 0 0 5px var(--primary-color), 0 0 10px var(--primary-color), 0 0 20px var(--primary-color);
   transition: transform 0.2s ease, text-shadow 0.2s ease;
 }
+
 
 .nav-links a:hover {
   transform: translateY(-2px);
@@ -276,10 +278,10 @@ nav {
 .hero-text-box {
   flex: 1;
   background-color: rgba(0, 0, 0, 0.5);
-  border: 2px solid #00B200;
+  border: 2px solid var(--primary-color);
   border-radius: 10px;
   padding: 40px;
-  box-shadow: 0 0 10px #00B200, 0 0 20px #00B200, 0 0 40px #00B200;
+  box-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--primary-color), 0 0 40px var(--primary-color);
   backdrop-filter: blur(5px);
   max-width: 700px;
 }
