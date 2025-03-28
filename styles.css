@@ -333,6 +333,57 @@ nav {
     }
 }
 
+/* 3D LOGO */
+@import url('https://fonts.googleapis.com/css?family=Concert+One');
+
+.logo-3d {
+  animation: wobble 5s ease-in-out infinite;
+  transform-origin: center center;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  position: relative;
+  height: 100px;
+}
+
+.logo-3d h1 {
+  display: block;
+  width: 100%;
+  padding: 0;
+  line-height: 1;
+  font: 900 2.5rem 'Concert One', sans-serif;
+  text-transform: uppercase;
+  position: absolute;
+  color: #0a0a0a;
+  animation: glow 10s ease-in-out infinite;
+  margin: 0;
+  text-align: left;
+}
+
+@keyframes wobble {
+  0%, 100% { transform: rotate3d(1, 1, 0, 40deg); }
+  25% { transform: rotate3d(-1, 1, 0, 40deg); }
+  50% { transform: rotate3d(-1, -1, 0, 40deg); }
+  75% { transform: rotate3d(1, -1, 0, 40deg); }
+}
+
+@keyframes glow {
+  0%, 100% { text-shadow: 0 0 30px #00ff00; }
+  25% { text-shadow: 0 0 30px #00b200; }
+  50% { text-shadow: 0 0 30px #00ffcc; }
+  75% { text-shadow: 0 0 30px #00ff66; }
+}
+
+.logo-3d h1:nth-child(2) { transform: translateZ(2px); }
+.logo-3d h1:nth-child(3) { transform: translateZ(4px); }
+.logo-3d h1:nth-child(4) { transform: translateZ(6px); }
+.logo-3d h1:nth-child(5) { transform: translateZ(8px); }
+.logo-3d h1:nth-child(6) { transform: translateZ(10px); }
+.logo-3d h1:nth-child(7) { transform: translateZ(12px); }
+.logo-3d h1:nth-child(8) { transform: translateZ(14px); }
+.logo-3d h1:nth-child(9) { transform: translateZ(16px); }
+.logo-3d h1:nth-child(10) { transform: translateZ(18px); }
+
+
 /* Section Styles */
 .section {
     padding: 80px 0;
