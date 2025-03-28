@@ -58,9 +58,9 @@ body {
     color: var(--primary-color);
     white-space: nowrap;
 
-    /* Prevent layout shift */
-    min-width: 16ch;
-    max-width: 16ch;
+    /* Give enough room for scrambled characters */
+    min-width: 22ch;
+    max-width: 22ch;
     height: 3rem;
     line-height: 3rem;
 
