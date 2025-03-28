@@ -52,14 +52,29 @@ body {
 
 .hero h1 span {
     display: inline-block;
-    min-width: 15ch;
-    max-width: 15ch;
-    height: 2.6rem;
+    font-family: 'Courier New', Courier, monospace;
+    min-width: 16ch;     /* Locks width to "Jonathan Geisler" */
+    max-width: 16ch;
+    height: 2.6rem;       /* Locks vertical space */
     overflow: hidden;
-    text-align: left;
     white-space: nowrap;
+    vertical-align: bottom;
+    text-align: left;
+    position: relative;
 }
 
+/* Cursor blink fix */
+.hero h1 span::after {
+    content: '';
+    position: absolute;
+    right: -14px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 20px;
+    background-color: var(--primary-color);
+    animation: cursor-blink 1s infinite;
+}
 
 #cursor {
     display: inline-block;
