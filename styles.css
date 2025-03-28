@@ -246,13 +246,14 @@ nav {
 }
 
 .hero-image-wrapper {
-    border: 3px solid white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-    max-width: 400px;
-    width: 100%;
+  border: 2px solid #00ff00;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 40px #00ff00;
+  max-width: 400px;
+  width: 100%;
 }
+
 
 
 .hero-image {
