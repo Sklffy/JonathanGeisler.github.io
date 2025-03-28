@@ -7,6 +7,33 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="neon.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    .terminal {
+      font-family: 'Courier New', Courier, monospace;
+      color: #00ff00;
+      background: #000000;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #00ff00;
+      width: fit-content;
+      margin-bottom: 20px;
+    }
+
+    .terminal .line {
+      white-space: pre;
+    }
+
+    .cursor {
+      display: inline-block;
+      width: 10px;
+      background-color: #00ff00;
+      animation: blink 1s step-start infinite;
+    }
+
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+  </style>
 </head>
 <body>
   <!-- Matrix Canvas Background -->
@@ -31,8 +58,11 @@
   <div class="container">
     <div class="hero-content-wrapper">
       <div class="hero-text-box">
-        <h1>Hi, I'm</h1>
-        <h1 class="neon-text">Jonathan Geisler</h1>
+        <div class="terminal">
+          <div class="line">&gt; Login: jonathan.geisler</div>
+          <div class="line">&gt; Password: ••••••••</div>
+          <div class="line">&gt; Access granted... <span class="cursor"></span></div>
+        </div>
         <p>A passionate learner specializing in Cyber Security.</p>
         <a href="#contact" class="btn">Get in Touch</a>
       </div>
