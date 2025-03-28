@@ -53,28 +53,41 @@ body {
 .hero h1 span {
     display: inline-block;
     font-family: 'Courier New', Courier, monospace;
-    min-width: 16ch;     /* Locks width to "Jonathan Geisler" */
-    max-width: 16ch;
-    height: 2.6rem;       /* Locks vertical space */
-    overflow: hidden;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
     white-space: nowrap;
+
+    /* Prevent layout shift */
+    min-width: 16ch;
+    max-width: 16ch;
+    height: 3rem;
+    line-height: 3rem;
+
+    overflow: hidden;
     vertical-align: bottom;
     text-align: left;
     position: relative;
+    letter-spacing: 1px;
 }
 
-/* Cursor blink fix */
 .hero h1 span::after {
     content: '';
     position: absolute;
-    right: -14px;
+    right: -12px;
     top: 50%;
     transform: translateY(-50%);
     width: 10px;
-    height: 20px;
+    height: 24px;
     background-color: var(--primary-color);
     animation: cursor-blink 1s infinite;
 }
+
+@keyframes cursor-blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
 
 #cursor {
     display: inline-block;
