@@ -202,17 +202,17 @@ nav {
 }
 
 .nav-links a {
-  color: #00ff6a;
-  font-weight: 500;
-  position: relative;
-  text-shadow: 0 0 5px #00ff6a, 0 0 10px #00ff6a, 0 0 20px #00ff6a;
-  transition: all 0.3s ease;
+  color: #00ff00; /* Neon green */
+  font-weight: 600;
+  text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00;
+  transition: transform 0.2s ease, text-shadow 0.2s ease;
 }
 
 .nav-links a:hover {
-  color: #00ff6a;
-  text-shadow: 0 0 10px #00ff6a, 0 0 20px #00ff6a, 0 0 40px #00ff6a;
+  transform: translateY(-2px);
+  text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
 }
+
 
 
 /* Hero Section */
