@@ -332,10 +332,10 @@ nav {
 }
 
 .section-header p {
-    color: var(--dark-gray);
-    max-width: 600px;
-    margin: 0 auto;
+  color: #b0f0b0; /* soft green for readability */
+  font-weight: 400;
 }
+
 
 /* Projects Section */
 .projects-grid {
