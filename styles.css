@@ -132,14 +132,22 @@ body {
   margin: 6px 0;
   font-size: 18px;
   font-weight: bold;
+  white-space: pre-wrap; /* just in case spacing matters */
 }
 
-/* Color customization */
-.terminal-line.login { color: #00ffff; }
-.terminal-line.password { color: #00ff00; }
-.terminal-line.access { color: #ff0000; }
+/* Retro terminal color palette */
+.terminal-line.login {
+  color: #00ffff;
+}
 
-/* Cursor stays simple */
+.terminal-line.password {
+  color: #00ff00;
+}
+
+.terminal-line.access {
+  color: #ff5555;
+}
+
 .cursor {
   display: inline-block;
   width: 10px;
@@ -151,6 +159,7 @@ body {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
 }
+
 
 
 
