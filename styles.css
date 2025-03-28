@@ -23,13 +23,25 @@
 }
 
 :root {
-  --primary-color: #00ff6a; /* Neon Green */
-  --secondary-color: #121212;
-  --text-color: #E0E0E0;
-  --light-gray: #2A2A2A;
-  --dark-gray: #A0A0A0;
+  --primary-color: #1aff00; /* Neon Green */
+  --secondary-color: #111d11; /* Cyber-green black */
+  --text-color: #c4fccc;
+  --light-gray: #0d1612;
+  --dark-gray: #0a0f0a;
   --terminal-font: 'Courier New', Courier, monospace;
 }
+
+body {
+  background-color: var(--dark-gray);
+  color: var(--text-color);
+}
+
+.project-card, .hero-text-box {
+  background-color: var(--light-gray);
+  border: 1px solid var(--primary-color);
+  box-shadow: 0 0 10px var(--primary-color), 0 0 30px var(--primary-color);
+}
+
 
 /* Neon Glow for text using primary color */
 .neon-glow {
