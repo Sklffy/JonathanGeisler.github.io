@@ -161,8 +161,6 @@ body {
 }
 
 
-
-
 .hero h1 span::after {
     content: '';
     position: absolute;
@@ -236,12 +234,12 @@ nav {
 .logo {
   font-size: 24px;
   font-weight: bold;
-  color: #00ff00;
+  color: #00B200;
   font-family: 'Courier New', Courier, monospace;
   text-shadow:
-    0 0 5px #00ff00,
-    0 0 10px #00ff00,
-    0 0 20px #00ff00;
+    0 0 5px #00B200,
+    0 0 10px #00B200,
+    0 0 20px #00B200;
 }
 
 
@@ -255,15 +253,15 @@ nav {
 }
 
 .nav-links a {
-  color: #00ff00; /* Neon green */
+  color: #00B200; /* Neon green */
   font-weight: 600;
-  text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00;
+  text-shadow: 0 0 5px #00B200, 0 0 10px #00B200, 0 0 20px #00B200;
   transition: transform 0.2s ease, text-shadow 0.2s ease;
 }
 
 .nav-links a:hover {
   transform: translateY(-2px);
-  text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
+  text-shadow: 0 0 10px #00B200, 0 0 20px #00B200, 0 0 30px #00B200;
 }
 
 
@@ -289,10 +287,10 @@ nav {
 .hero-text-box {
   flex: 1;
   background-color: rgba(0, 0, 0, 0.5);
-  border: 2px solid #00ff00;
+  border: 2px solid #00B200;
   border-radius: 10px;
   padding: 40px;
-  box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 40px #00ff00;
+  box-shadow: 0 0 10px #00B200, 0 0 20px #00B200, 0 0 40px #00B200;
   backdrop-filter: blur(5px);
   max-width: 700px;
 }
@@ -305,10 +303,10 @@ nav {
 }
 
 .hero-image-wrapper {
-  border: 2px solid #00ff00;
+  border: 2px solid #00B200;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 40px #00ff00;
+  box-shadow: 0 0 10px #00B200, 0 0 20px #00B200, 0 0 40px #00B200;
   max-width: 400px;
   width: 100%;
 }
