@@ -378,10 +378,13 @@ nav {
 }
 
 .project-img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+  width: 100px; /* or larger like 120px */
+  height: auto;
+  display: block;
+  margin-bottom: 15px;
+  filter: drop-shadow(0 0 5px #00ff66); /* optional glowing effect */
 }
+
 
 .project-content {
     padding: 20px;
