@@ -1,14 +1,3 @@
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(to bottom, #0b1f0b 0%, #0a1c0a 30%, #000000 100%);
-  background-attachment: fixed;
-  color: #00ff66;
-  font-family: 'Courier New', Courier, monospace;
-  overflow-x: hidden;
-}
-
 
 /* Download button styles */
 .download-btn {
