@@ -7,7 +7,30 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="neon.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #0b1f0b, #000000);
+      color: #00ff66;
+      font-family: 'Courier New', Courier, monospace;
+      overflow-x: hidden;
+    }
+
+    #matrixCanvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      opacity: 0.2;
+      filter: blur(0.5px);
+      mix-blend-mode: screen;
+    }
+
     .terminal {
       font-family: 'Courier New', Courier, monospace;
       color: #00B200;
@@ -37,7 +60,7 @@
 </head>
 <body>
   <!-- Matrix Canvas Background -->
-  <canvas id="matrixCanvas" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; opacity: 0.15;"></canvas>
+  <canvas id="matrixCanvas"></canvas>
 
   <!-- Header -->
   <header>
@@ -53,159 +76,150 @@
     </div>
   </header>
 
-<!-- Hero Section -->
-<section class="hero">
-  <div class="container">
-    <div class="hero-content-wrapper">
-      <div class="hero-text-box">
-        <div class="terminal-login-box">
-          <p class="terminal-line login" id="line1"></p>
-          <p class="terminal-line password" id="line2"></p>
-          <p class="terminal-line access" id="line3"><span class="cursor">|</span></p>
-        </div>
-        <p class="hero-subtext">A passionate learner specializing in Cyber Security.</p>
-        <a href="#contact" class="btn">Get in Touch</a>
-      </div>
-      <div class="hero-image-container">
-        <div class="hero-image-wrapper">
-          <img src="Jonathan.png" alt="Jonathan Geisler" class="hero-image" />
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- About Section -->
-<section id="about" class="section">
+  <!-- Hero Section -->
+  <section class="hero">
     <div class="container">
-        <div class="section-header">
-            <h2>About Me</h2>
-            <p>A little bit about me</p>
+      <div class="hero-content-wrapper">
+        <div class="hero-text-box">
+          <div class="terminal-login-box">
+            <p class="terminal-line login" id="line1"></p>
+            <p class="terminal-line password" id="line2"></p>
+            <p class="terminal-line access" id="line3"><span class="cursor">|</span></p>
+          </div>
+          <p class="hero-subtext">A passionate learner specializing in Cyber Security.</p>
+          <a href="#contact" class="btn">Get in Touch</a>
         </div>
-        <div style="max-width: 800px; margin: 0 auto;">
+        <div class="hero-image-container">
+          <div class="hero-image-wrapper">
+            <img src="Jonathan.png" alt="Jonathan Geisler" class="hero-image" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>About Me</h2>
+        <p>A little bit about me</p>
+      </div>
+      <div style="max-width: 800px; margin: 0 auto;">
+        <p>
+          Hi, my name is <strong>Jonathan Geisler</strong>, and I'm currently pursuing a Bachelor's in Computer Science with a focus on Cybersecurity at Liberty University. I specialize in network security, penetration testing, and system hardening using tools like <strong>Nmap</strong>, <strong>Metasploit</strong>, <strong>Wireshark</strong>, and <strong>Docker</strong> across both Linux and Windows environments.
+        </p>
+        <p style="margin-top: 20px;">
+          Recently, I’ve been competing in the <strong>NSA-sponsored NCAE Cyber Games</strong>, where I’ve worked hands-on defending against Red Team attacks and managing critical services such as FTP and SSH. Beyond tech, I also serve in student government, where I advocate for students and collaborate on campus-wide policy initiatives.
+        </p>
+        <p style="margin-top: 20px;">
+          I’m passionate about securing systems and solving complex problems, and I’m eager to bring that drive and experience to a forward-thinking cybersecurity team.
+        </p>
+
+        <div style="margin-top: 40px;">
+          <h3>My Skills</h3>
+          <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px;">
+            <!-- Skill tags (you can move this to a CSS class later) -->
+            <span style="background-color: green; padding: 8px 15px; border-radius: 20px; font-size: 14px;">Cybersecurity</span>
+            <span style="background-color: green; padding: 8px 15px; border-radius: 20px; font-size: 14px;">Penetration Testing</span>
+            <span style="background-color: green; padding: 8px 15px; border-radius: 20px; font-size: 14px;">Network Security</span>
+            <span style="background-color: green; padding: 8px 15px; border-radius: 20px; font-size: 14px;">Linux</span>
+            <span style="background-color: green; padding: 8px 15px; border-radius: 20px; font-size: 14px;">Windows</span>
+            <span style="background-color: green; padding: 8px 15px; border-radius: 20px; font-size: 14px;">Wireshark</span>
+            <span style="background-color: green; padding: 8px 15px; border-radius: 20px; font-size: 14px;">Nmap</span>
+            <span style="background-color: green; padding: 8px 15px; border-radius: 20px; font-size: 14px;">Metasploit</span>
+            <span style="background-color: green; padding: 8px 15px; border-radius: 20px; font-size: 14px;">Docker</span>
+            <span style="background-color: green; padding: 8px 15px; border-radius: 20px; font-size: 14px;">System Hardening</span>
+            <span style="background-color: green; padding: 8px 15px; border-radius: 20px; font-size: 14px;">Team Collaboration</span>
+            <span style="background-color: green; padding: 8px 15px; border-radius: 20px; font-size: 14px;">Student Leadership</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section" style="background-color: var(--secondary-color);">
+    <div class="container">
+      <div class="section-header">
+        <h2>My Projects</h2>
+        <p>What I've Been Up To</p>
+      </div>
+      <div class="projects-grid">
+        <!-- Project: DWAYNE-INATOR-5000 -->
+        <div class="project-card">
+          <img src="score.png" alt="Scoreboard Icon" class="project-preview-img" />
+          <div class="project-content">
+            <h3>DWAYNE-INATOR-5000 Scoreboard</h3>
             <p>
-                Hi, my name is <strong>Jonathan Geisler</strong>, and I'm currently pursuing a Bachelor's in Computer Science with a focus on Cybersecurity at Liberty University. I specialize in network security, penetration testing, and system hardening using tools like <strong>Nmap</strong>, <strong>Metasploit</strong>, <strong>Wireshark</strong>, and <strong>Docker</strong> across both Linux and Windows environments.
+              A Matrix-themed CTF scoreboard built with TOML-based scoring logic for SSH, FTP, DNS, and Web services. 
+              Features glowing UI, animated canvas background, and real-time scoring via LXC containers and ZeroTier.
             </p>
-            <p style="margin-top: 20px;">
-                Recently, I’ve been competing in the <strong>NSA-sponsored NCAE Cyber Games</strong>, where I’ve worked hands-on defending against Red Team attacks and managing critical services such as FTP and SSH. Beyond tech, I also serve in student government, where I advocate for students and collaborate on campus-wide policy initiatives.
-            </p>
-            <p style="margin-top: 20px;">
-                I’m passionate about securing systems and solving complex problems, and I’m eager to bring that drive and experience to a forward-thinking cybersecurity team.
-            </p>
-
-            <div style="margin-top: 40px;">
-                <h3>My Skills</h3>
-                <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px;">
-                    <span style="background-color: green; padding: 8px 15px; border-radius: 20px; font-size: 14px;">Cybersecurity</span>
-                    <span style="background-color: green; padding: 8px 15px; border-radius: 20px; font-size: 14px;">Penetration Testing</span>
-                    <span style="background-color: green; padding: 8px 15px; border-radius: 20px; font-size: 14px;">Network Security</span>
-                    <span style="background-color: green; padding: 8px 15px; border-radius: 20px; font-size: 14px;">Linux</span>
-                    <span style="background-color: green; padding: 8px 15px; border-radius: 20px; font-size: 14px;">Windows</span>
-                    <span style="background-color: green; padding: 8px 15px; border-radius: 20px; font-size: 14px;">Wireshark</span>
-                    <span style="background-color: green; padding: 8px 15px; border-radius: 20px; font-size: 14px;">Nmap</span>
-                    <span style="background-color: green; padding: 8px 15px; border-radius: 20px; font-size: 14px;">Metasploit</span>
-                    <span style="background-color: green; padding: 8px 15px; border-radius: 20px; font-size: 14px;">Docker</span>
-                    <span style="background-color: green; padding: 8px 15px; border-radius: 20px; font-size: 14px;">System Hardening</span>
-                    <span style="background-color: green; padding: 8px 15px; border-radius: 20px; font-size: 14px;">Team Collaboration</span>
-                    <span style="background-color: green; padding: 8px 15px; border-radius: 20px; font-size: 14px;">Student Leadership</span>
-                </div>
+            <div class="project-links">
+              <a href="https://github.com/JimmyJonnyBonny/Scoreboard" class="download-btn" target="_blank">👀 View on GitHub</a>
             </div>
+          </div>
         </div>
-    </div>
-</section>
 
-
-<!-- Projects Section -->
-<section id="projects" class="section" style="background-color: var(--secondary-color);">
-  <div class="container">
-    <div class="section-header">
-      <h2>My Projects</h2>
-      <p>What I've Been Up To</p>
-    </div>
-    <div class="projects-grid">
-
-      <!-- DWAYNE-INATOR-5000 Scoreboard -->
-      <div class="project-card">
-        <img src="score.png" alt="Scoreboard Icon" class="project-preview-img" />
-        <div class="project-content">
-          <h3>DWAYNE-INATOR-5000 Scoreboard</h3>
-          <p>
-            A Matrix-themed CTF scoreboard built with TOML-based scoring logic for SSH, FTP, DNS, and Web services. 
-            Features glowing UI, animated canvas background, and real-time scoring via LXC containers and ZeroTier.
-          </p>
-          <div class="project-links">
-            <a href="https://github.com/JimmyJonnyBonny/Scoreboard" class="download-btn" target="_blank">👀 View on GitHub</a>
+        <!-- Project: Proxmox Lab -->
+        <div class="project-card">
+          <img src="data.png" alt="Data Icon" class="project-preview-img" />
+          <div class="project-content">
+            <h3>Proxmox Cyber Lab</h3>
+            <p>
+              A local high-performance virtualization environment for cybersecurity and AI/ML workloads using Proxmox. 
+              Includes GPU passthrough, VLAN segmentation, pfSense firewalls, and real-world testing environments.
+            </p>
+            <div class="project-links">
+              <a href="Software%20Requirements%20Specification.docx" class="download-btn" download>📄 Download SRS Document</a>
+            </div>
           </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <!-- Proxmox Cyber Lab -->
-      <div class="project-card">
-        <img src="data.png" alt="Data Icon" class="project-preview-img" />
-        <div class="project-content">
-          <h3>Proxmox Cyber Lab</h3>
-          <p>
-            A local high-performance virtualization environment for cybersecurity and AI/ML workloads using Proxmox. 
-            Includes GPU passthrough, VLAN segmentation, pfSense firewalls, and real-world testing environments.
-          </p>
-          <div class="project-links">
-            <a href="Software%20Requirements%20Specification.docx" class="download-btn" download>📄 Download SRS Document</a>
-          </div>
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Get In Touch</h2>
+        <p>Interested in working together? Feel free to reach out!</p>
+      </div>
+
+      <div class="contact-info">
+        <h3>My Email Addresses</h3>
+
+        <div class="email-container">
+          <h4>Professional</h4>
+          <a href="mailto:Jdgeisler@gmail.com" class="email-link">
+            <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 24 24" fill="#00ff66" style="filter: drop-shadow(0 0 6px #00ff66); margin-right: 8px;">
+              <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+            Jdgeisler@gmail.com
+          </a>
+        </div>
+
+        <div class="email-container">
+          <h4>Academic</h4>
+          <a href="mailto:Jgeisler6@liberty.edu" class="email-link">
+            <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 24 24" fill="#00ff66" style="filter: drop-shadow(0 0 6px #00ff66); margin-right: 8px;">
+              <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+            Jgeisler6@liberty.edu
+          </a>
         </div>
       </div>
 
-    </div>
-  </div>
-</section>
-
-
-
-<!-- Contact Section -->
-<section id="contact" class="section">
-  <div class="container">
-    <div class="section-header">
-      <h2>Get In Touch</h2>
-      <p>Interested in working together? Feel free to reach out!</p>
-    </div>
-
-    <div class="contact-info">
-      <h3>My Email Addresses</h3>
-
-      <div class="email-container">
-        <h4>Professional</h4>
-        <a href="mailto:Jdgeisler@gmail.com" class="email-link">
-          <!-- Green Glowing SVG Icon -->
-          <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 24 24" fill="#00ff66" style="filter: drop-shadow(0 0 6px #00ff66); margin-right: 8px;">
-            <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/jdgeisler/" target="_blank" title="LinkedIn" aria-label="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white">
+            <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5v16H0V8zm7.5 0h4.7v2.2h.1c.7-1.2 2.3-2.4 4.7-2.4 5 0 5.9 3.3 5.9 7.5V24h-5V15.1c0-2.1 0-4.8-2.9-4.8s-3.3 2.2-3.3 4.6V24h-5V8z"/>
           </svg>
-          Jdgeisler@gmail.com
-        </a>
-      </div>
-
-      <div class="email-container">
-        <h4>Academic</h4>
-        <a href="mailto:Jgeisler6@liberty.edu" class="email-link">
-          <!-- Green Glowing SVG Icon -->
-          <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 24 24" fill="#00ff66" style="filter: drop-shadow(0 0 6px #00ff66); margin-right: 8px;">
-            <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
-          </svg>
-          Jgeisler6@liberty.edu
         </a>
       </div>
     </div>
-
-    <div class="social-links">
-      <a href="https://www.linkedin.com/in/jdgeisler/" target="_blank" title="LinkedIn" aria-label="LinkedIn">
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white">
-          <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5v16H0V8zm7.5 0h4.7v2.2h.1c.7-1.2 2.3-2.4 4.7-2.4 5 0 5.9 3.3 5.9 7.5V24h-5V15.1c0-2.1 0-4.8-2.9-4.8s-3.3 2.2-3.3 4.6V24h-5V8z"/>
-        </svg>
-      </a>
-    </div>
-  </div>
-</section>
-
-
+  </section>
 
   <!-- Footer -->
   <footer>
