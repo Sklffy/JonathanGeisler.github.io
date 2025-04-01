@@ -9,6 +9,34 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   
 </head>
+  <style>
+    .terminal {
+      font-family: 'Courier New', Courier, monospace;
+      color: #00B200;
+      background: #000000;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #00B200;
+      width: fit-content;
+      margin-bottom: 20px;
+    }
+
+    .terminal .line {
+      white-space: pre;
+    }
+
+    .cursor {
+      display: inline-block;
+      width: 10px;
+      background-color: #00B200;
+      animation: blink 1s step-start infinite;
+    }
+
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+  </style>
+  
 <body>
   <!-- Matrix Canvas Background -->
   <canvas id="matrixCanvas"></canvas>
