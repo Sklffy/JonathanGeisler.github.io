@@ -48,11 +48,6 @@ html, body {
 }
 
 /* Base styles */
-body {
-  background-color: var(--background-dark);
-  color: var(--text-color);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
 
 /* Ensure all headings and paragraphs are visible */
 h1, h2, h3, h4, p, span, a, .skill-badge {
@@ -338,8 +333,9 @@ nav {
 .hero p {
     font-size: 20px;
     margin-bottom: 30px;
-    color: var(--dark-gray);
+    color: var(--text-color); /* Visible neon green */
 }
+
 
 /* Responsive hero section */
 @media (max-width: 768px) {
