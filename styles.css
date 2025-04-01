@@ -97,6 +97,14 @@ body {
     letter-spacing: 1px;
 }
 
+.hero-subtext {
+  color: var(--text-color);
+  font-size: 20px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+
 .hero h1 span {
     display: inline-block;
     font-family: 'Courier New', Courier, monospace;
