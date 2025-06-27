@@ -20,7 +20,7 @@ body::before {
   content: '';
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
-  background-image: url('grid.svg'); /* Your grid pattern here */
+  background-image: url('grid.svg');
   opacity: 0.08;
   pointer-events: none;
   z-index: -2;
