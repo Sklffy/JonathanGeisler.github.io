@@ -1,139 +1,121 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const canvas = document.getElementById('matrixCanvas');
-    const ctx = canvas.getContext('2d');
+  // Hacker-style text scramble effect
+const scrambleTarget = document.querySelector(".scramble-target");
+const originalText = "Cybersecurity Student";
+const scrambleChars = "!<>-_\\/[]{}—=+*^?#________";
 
-    // Matrix Canvas Setup
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+function textScrambleEffect(textEl, targetText, speed = 30, loopDelay = 3000) {
+  let iteration = 0;
+  let interval;
 
-    const matrixChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789$+-*/=%"\'#&_(),.;:?!\\|{}<>[]^~';
-    const columns = Math.floor(canvas.width / 20);
-    const drops = [];
+  function scramble() {
+    clearInterval(interval);
+    iteration = 0;
 
-    for (let i = 0; i < columns; i++) {
-        drops[i] = Math.random() * -canvas.height;
-    }
+    interval = setInterval(() => {
+      textEl.textContent = targetText
+        .split("")
+        .map((char, i) => {
+          if (i < iteration) return targetText[i];
+          return scrambleChars[Math.floor(Math.random() * scrambleChars.length)];
+        })
+        .join("");
 
-    function draw() {
-        ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-        ctx.fillStyle = 'rgba(139, 0, 0, 0.8)';
-        ctx.font = '15px Courier New';
+      if (iteration >= targetText.length) {
+        clearInterval(interval);
+        setTimeout(scramble, loopDelay);
+      }
 
-        for (let i = 0; i < drops.length; i++) {
-            const text = matrixChars[Math.floor(Math.random() * matrixChars.length)];
-            ctx.fillText(text, i * 20, drops[i]);
-            if (drops[i] > canvas.height && Math.random() > 0.975) {
-                drops[i] = 0;
-            }
-            drops[i] += Math.random() * 1 + 0.5;
-        }
-    }
+      iteration += 1 / 3;
+    }, speed);
+  }
 
-    setInterval(draw, 35);
-
-    window.addEventListener('resize', function () {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-        const newColumns = Math.floor(canvas.width / 20);
-        for (let i = 0; i < newColumns; i++) {
-            if (i >= drops.length) {
-                drops[i] = Math.random() * -canvas.height;
-            }
-        }
-    });
-
-// Terminal Typewriter Login Animation
-const lines = [
-    "> Login: Jonathan Geisler",
-    "> Password: ********",
-    "> Access granted..."
-];
-
-const delay = (ms) => new Promise(res => setTimeout(res, ms));
-
-async function typeLine(id, text, delayMs = 40) {
-    const el = document.getElementById(id);
-    for (let i = 0; i < text.length; i++) {
-        el.textContent += text[i];
-        await delay(delayMs);
-    }
+  // Start initial effect after slight delay
+  setTimeout(scramble, 1000);
 }
 
-async function animateLoginPrompt() {
-    await typeLine("line1", lines[0]);
-    await delay(500);
-    await typeLine("line2", lines[1]);
-    await delay(500);
-    await typeLine("line3", lines[2]);
+textScrambleEffect(scrambleTarget, originalText);
+
+const phrases = [
+    "Cybersecurity Student",
+    "Blue Team Defender",
+    "CTF Competitor",
+    "Ethical Hacker in Training"
+  ];
+
+  const el = document.getElementById("typewriter");
+
+  let currentPhrase = 0;
+  let currentChar = 0;
+  let isDeleting = false;
+  let delay = 100;
+
+  function typeLoop() {
+    const phrase = phrases[currentPhrase];
+
+    if (isDeleting) {
+      currentChar--;
+    } else {
+      currentChar++;
+    }
+
+    el.textContent = phrase.substring(0, currentChar);
+
+    if (!isDeleting && currentChar === phrase.length) {
+      isDeleting = true;
+      delay = 1500; // Pause before deleting
+    } else if (isDeleting && currentChar === 0) {
+      isDeleting = false;
+      currentPhrase = (currentPhrase + 1) % phrases.length;
+      delay = 300; // Delay before typing new
+    } else {
+      delay = isDeleting ? 50 : 100;
+    }
+
+    setTimeout(typeLoop, delay);
+  }
+
+  setTimeout(typeLoop, 500); // Initial delay
+
+const canvas = document.getElementById("gridCanvas");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+const spacing = 40;
+let mouseX = canvas.width / 2;
+let mouseY = canvas.height / 2;
+
+function drawGrid() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.strokeStyle = "rgba(255, 255, 255, 0.06)";
+  ctx.lineWidth = 1;
+
+  for (let x = 0; x < canvas.width; x += spacing) {
+    for (let y = 0; y < canvas.height; y += spacing) {
+      const dx = (mouseX - x) * 0.02;
+      const dy = (mouseY - y) * 0.02;
+
+      ctx.beginPath();
+      ctx.moveTo(x, y);
+      ctx.lineTo(x + dx, y + dy);
+      ctx.stroke();
+    }
+  }
 }
 
-animateLoginPrompt();
+function animate() {
+  drawGrid();
+  requestAnimationFrame(animate);
+}
 
+animate();
 
-    // Theme color switching
-    const themeButtons = document.querySelectorAll('.theme-btn');
-    themeButtons.forEach(button => {
-        button.addEventListener('click', function () {
-            const color = this.getAttribute('data-color');
-            document.documentElement.style.setProperty('--primary-color', color);
-            themeButtons.forEach(btn => btn.style.border = 'none');
-            this.style.border = '2px solid white';
-            localStorage.setItem('preferredColor', color);
-        });
-    });
+window.addEventListener("mousemove", (e) => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+});
 
-    // Font size controls
-    let currentFontSize = 16;
-    const fontSizeIncrease = document.getElementById('fontSizeIncrease');
-    const fontSizeDecrease = document.getElementById('fontSizeDecrease');
-
-    if (fontSizeIncrease && fontSizeDecrease) {
-        fontSizeIncrease.addEventListener('click', () => {
-            if (currentFontSize < 20) {
-                currentFontSize++;
-                document.body.style.fontSize = currentFontSize + 'px';
-                localStorage.setItem('preferredFontSize', currentFontSize);
-            }
-        });
-
-        fontSizeDecrease.addEventListener('click', () => {
-            if (currentFontSize > 12) {
-                currentFontSize--;
-                document.body.style.fontSize = currentFontSize + 'px';
-                localStorage.setItem('preferredFontSize', currentFontSize);
-            }
-        });
-    }
-
-    // Apply saved preferences
-    const savedColor = localStorage.getItem('preferredColor');
-    if (savedColor) {
-        document.documentElement.style.setProperty('--primary-color', savedColor);
-        themeButtons.forEach(btn => {
-            if (btn.getAttribute('data-color') === savedColor) {
-                btn.style.border = '2px solid white';
-            }
-        });
-    }
-
-    const savedFontSize = localStorage.getItem('preferredFontSize');
-    if (savedFontSize) {
-        currentFontSize = parseInt(savedFontSize);
-        document.body.style.fontSize = currentFontSize + 'px';
-    }
-
-    // Scroll reveal animations
-    function revealOnScroll() {
-        const elements = document.querySelectorAll('.project-card, .section-header, .contact-info');
-        elements.forEach(el => {
-            const rectTop = el.getBoundingClientRect().top;
-            if (rectTop < window.innerHeight - 150) {
-                el.classList.add('active');
-            }
-        });
-    }
-
-    window.addEventListener('scroll', revealOnScroll);
-    revealOnScroll();
+window.addEventListener("resize", () => {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
 });
