@@ -1,38 +1,3 @@
-// ==================== RADAR CHART ====================
-const chartCtx = document.getElementById("skillsRadar");
-if (chartCtx) {
-  new Chart(chartCtx, {
-    type: 'radar',
-    data: {
-      labels: ['C++', 'HTML', 'CSS', 'JAVASCRIPT', 'Python', 'Bash'],
-      datasets: [{
-        label: 'Skill Level',
-        data: [90, 75, 75, 65, 90, 65],
-        backgroundColor: 'rgba(100, 255, 218, 0.2)',
-        borderColor: 'rgba(100, 255, 218, 1)',
-        pointBackgroundColor: '#64ffda',
-        pointRadius: 5,
-        pointHoverRadius: 7
-      }]
-    },
-    options: {
-      scales: {
-        r: {
-          angleLines: { color: '#334155' },
-          grid: { color: '#334155' },
-          pointLabels: { color: '#cbd5e1', font: { size: 12 } },
-          ticks: { display: false },
-          suggestedMin: 0,
-          suggestedMax: 100
-        }
-      },
-      plugins: {
-        legend: { display: false }
-      }
-    }
-  });
-}
-
 // ==================== TABS ====================
 const tabButtons = document.querySelectorAll(".tab-btn");
 const tabContents = document.querySelectorAll(".tab-content");
@@ -49,44 +14,6 @@ tabButtons.forEach(button => {
     });
   });
 });
-
-// ==================== TEXT SCRAMBLE EFFECT ====================
-const scrambleTarget = document.querySelector(".scramble-target");
-const originalText = "Cybersecurity Student";
-const scrambleChars = "!<>-_\\/[]{}—=+*^?#________";
-
-function textScrambleEffect(textEl, targetText, speed = 30, loopDelay = 3000) {
-  let iteration = 0;
-  let interval;
-
-  function scramble() {
-    clearInterval(interval);
-    iteration = 0;
-
-    interval = setInterval(() => {
-      textEl.textContent = targetText
-        .split("")
-        .map((char, i) => {
-          if (i < iteration) return targetText[i];
-          return scrambleChars[Math.floor(Math.random() * scrambleChars.length)];
-        })
-        .join("");
-
-      if (iteration >= targetText.length) {
-        clearInterval(interval);
-        setTimeout(scramble, loopDelay);
-      }
-
-      iteration += 1 / 3;
-    }, speed);
-  }
-
-  setTimeout(scramble, 1000);
-}
-
-if (scrambleTarget) {
-  textScrambleEffect(scrambleTarget, originalText);
-}
 
 // ==================== TYPEWRITER ====================
 const phrases = [
