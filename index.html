@@ -10,37 +10,38 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
   <style>
     body {
-      cursor: url('assets/imgs/icons8-cursor-64.png'), auto;
+      cursor: url('assets/images/custom-cursor.png'), auto;
     }
 
 #gridCanvas {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      z-index: -1;
-
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
 }
   </style>
 </head>
 <body>
-  <!-- Canvas Background -->
 <canvas id="gridCanvas"></canvas>
 
-  <!-- Navbar -->
-    <nav class="navbar glassy-navbar">
-      <div class="nav-left">
-        <img src="Assets/imgs/Logo.png" alt="Logo" class="logo-image" />
-        <span class="logo-text">Jonathan Geisler</span>
-      </div>
-      <div class="nav-menu">
-        <a href="#" class="fas fa-home">Home</a>
-        <a href="#projects" class="fas fa-graduation-cap">Education</a>
-        <a href="#about" class="fas fa-user">About</a>
-        <a href="#contact" class="fas fa-envelope">Contact</a>
-      </div>
-    </nav>
+<!-- Navbar -->
+<nav class="navbar glassy-navbar">
+  <div class="nav-left">
+    <img src="Assets/imgs/logo.png" alt="Logo" class="logo-img" />
+    <span class="logo-text">Jonathan Geisler</span>
+  </div>
+
+  <div class="nav-menu">
+    <a href="#"><i class="fas fa-home"></i> Home</a>
+    <a href="#education"><i class="fas fa-graduation-cap"></i> Education</a>
+    <a href="#about"><i class="fas fa-user"></i> About</a>
+    <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+  </div>
+</nav>
+
 
 <!-- Hero Section -->
 <section class="hero">
@@ -63,7 +64,7 @@
 
     <div class="profile-wrapper">
       <div class="border-spin"></div>
-      <img src="/Assets/Jonathan.png" alt="Jonathan Geisler" class="profile-pic" />
+      <img src="/Assets/imgs/" alt="Jonathan Geisler" class="profile-pic" />
     </div>
   </div>
 </section>
@@ -72,28 +73,242 @@
 
 <!-- Education Section -->
 <section id="education" class="education-section">
-  <div class="section-header">
+<div class="section-header">
+  <div class="section-line"></div>
+  <h2 class="section-title">EDUCATION</h2>
+</div>
+  <div class="timeline">
     
-  </div>
-    <h2>Education</h2>
-    <ul>
-      <li>
-        <h3>Bachelor of Science in Cybersecurity</h3>
-        <p>University of Example - 2025</p>
-      </li>
-      <li>
-        <h3>Certified Ethical Hacker (CEH)</h3>
-        <p>EC-Council - 2024</p>
-      </li>
-    </ul>
+    <!-- Liberty University -->
+    <div class="timeline-entry left">
+      <div class="content-box">
+        <p class="timeline-date">2024 – 2027</p>
+        <h3>Bachelor’s Degree</h3>
+        <p class="major">Computer Science – Cybersecurity</p>
+        <p class="institution">Liberty University</p>
+        <p class="location">📍Lynchburg, VA</p>
+        <p class="details">
+          Activities: Liberty Cyber Club, NCAE-C Competition team<br>
+          🛡️ Skills: Vulnerability Assessment, VPN, +13 more
+        </p>
+      </div>
+      <div class="icon"><i class="fas fa-graduation-cap"></i></div>
+    </div>
+
+    <!-- Liberty Online Academy -->
+    <div class="timeline-entry right">
+      <div class="content-box">
+        <p class="timeline-date">2024</p>
+        <h3>High School Diploma</h3>
+        <p class="major">Liberty University Online Academy</p>
+        <p class="location">📍Online</p>
+        <p class="details">
+          Activities: Beta Club Honor Society<br>
+          🐍 Skills: Python (Programming Language)
+        </p>
+      </div>
+      <div class="icon"><i class="fas fa-school"></i></div>
+    </div>
   </div>
 </section>
+
+<!-- Work Experience Section -->
+<section id="work" class="work-section">
+<div class="section-header">
+  <div class="section-line"></div>
+  <h2 class="section-title">EXPERIENCE</h2>
+</div>
+  <div class="timeline">
+
+    <!-- CBTS -->
+    <div class="timeline-entry left">
+      <div class="content-box work-box">
+        <img src="Assets/Work/CBTS.png" alt="CBTS Logo" class="work-logo">
+        <div>
+          <p class="timeline-date">May 2025 – July 2025</p>
+          <h3>IT Support Technician</h3>
+          <p class="organization"><strong>CBTS Technology Solutions | Contract</strong></p>
+          <ul>
+            <li>Delivered remote and onsite support for cloud migrations with minimal user disruption</li>
+            <li>Troubleshot email, authentication, remote access, and cloud service issues to maintain uptime</li>
+            <li>Assisted in migrating legacy systems to Microsoft Azure cloud infrastructure</li>
+            <li>Supported end users during system transitions to ensure minimal disruption and optimal functionality</li>
+          </ul>
+        </div>
+      </div>
+      <div class="icon"><i class="fas fa-briefcase"></i></div>
+    </div>
+
+    <!-- NCAE -->
+    <div class="timeline-entry right">
+      <div class="content-box work-box">
+        <img src="Assets/Work/NCAE.png" alt="NCAE Cyber Games Logo" class="work-logo">
+        <div>
+          <p class="timeline-date">Jan 2025 – May 2025</p>
+          <h3>SSH/FTP Services Specialist</h3>
+          <p class="organization"><strong>National Centers of Academic Excellence | Cyber Games</strong></p>
+          <ul>
+            <li>NSA-sponsored National Centers of Academic Excellence Cyber Games Competition</li>
+            <li>Placed 2nd in the regional NCAE Cyber Games 2025</li>
+            <li>Configured and secured FTP and SSH services on CentOS and Kali Linux</li>
+            <li>Collaborated with a 10-member team to protect simulated enterprise infrastructure</li>
+            <li>Conducted threat hunting and malware analysis across Windows and Linux systems</li>
+            <li>Developed expertise in ethical hacking, log analysis, and system hardening</li>
+          </ul>
+        </div>
+      </div>
+      <div class="icon"><i class="fas fa-network-wired"></i></div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider" />
+
+<!-- Section Tabs -->
+<section class="section-tabs">
+  <div class="tab-buttons">
+    <button class="tab-btn active" data-tab="about">About Me</button>
+    <button class="tab-btn" data-tab="projects">Projects</button>
+    <button class="tab-btn" data-tab="tech">Tech Stack</button>
+  </div>
+
+<!-- About -->
+<div class="tab-content active" id="about">
+  <div class="about-container">
+    <div class="about-text">
+      <h2 class="section-title">About <span class="highlight">Me</span></h2>
+      <h3 class="intro">Hello, I'm <span class="name-gradient">Jonathan Geisler</span></h3>
+      <p class="bio">
+        Cybersecurity-focused CS major with expertise in building defense labs, configuring secure infrastructure, 
+        and leading hands-on cyber exercises. Passionate about real-world threats, cloud infra, and automation. 
+        I specialize in securing systems, writing clean code, and creating immersive technical experiences.
+      </p>
+      <div class="about-buttons">
+      </div>
+    </div>
+    <div class="about-image">
+      <div class="glow-circle">
+        <img src="Assets/imgs/logo.png" alt="Jonathan Geisler" />
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Projects -->
+<div class="tab-content" id="projects">
+  <h2 class="section-title"><span class="glow-line"></span>My <span class="highlight">Projects</span></h2>
+  <div class="project-grid">
+    <!-- RedGuard AI -->
+    <div class="project-card">
+      <img src="Assets/Projects/RED.png" class="project-img" alt="RedGuard AI" />
+      <div class="project-info">
+        <h3>RedGuard AI</h3>
+        <p>An AI-driven honeypot threat intelligence system for simulating live attacks.</p>
+        <div class="tags">
+          <span>Python</span><span>Flask</span><span>Docker</span><span>ELK Stack</span>
+        </div>
+      </div>
+      <div class="project-actions">
+        <a href="#" class="details-btn">Details</a>
+      </div>
+    </div>
+
+    <!-- ATLANTIS Scoreboard -->
+    <div class="project-card">
+      <img src="Assets/Projects/favicon.png" class="project-img" alt="ATLANTIS Scoreboard" />
+      <div class="project-info">
+        <h3>ATLANTIS Scoreboard</h3>
+        <p>A C++ and HTML-based scoring engine with inject tracking and live service checks.</p>
+        <div class="tags">
+          <span>C++</span><span>HTML/CSS</span><span>JavaScript</span><span>JSON</span>
+        </div>
+      </div>
+      <div class="project-actions">
+        <a href="#" class="details-btn">Details</a>
+      </div>
+    </div>
+
+    <!-- Proxmox Cyber Lab -->
+    <div class="project-card">
+      <img src="Assets/Projects/proxmox.jpg" class="project-img" alt="Proxmox Cyber Lab" />
+      <div class="project-info">
+        <h3>Proxmox Cyber Lab</h3>
+        <p>Home lab for cyber defense testing. GPU passthrough, pfSense, VLANs, and AI/ML support.</p>
+        <div class="tags">
+          <span>Proxmox</span><span>pfSense</span><span>Virtualization</span><span>Linux</span><span>AI/ML</span>
+        </div>
+      </div>
+      <div class="project-actions">
+        <a href="#" class="details-btn">Details</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Tech Stack -->
+  <div class="tab-content" id="tech">
+    <h2 class="section-title"><span class="glow-line"></span>Tech <span class="highlight">Stack</span></h2>
+    <div class="tech-grid">
+      <!-- Programming Languages -->
+      <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"/><span>HTML</span></div>
+      <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"/><span>CSS</span></div>
+      <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"/><span>JavaScript</span></div>
+      <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"/><span>Python</span></div>
+      <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"/><span>C++</span></div>
+      <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"/><span>Java</span></div>
+      <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg"/><span>Bash</span></div>
+      <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/powershell/powershell-original.svg"/><span>PowerShell</span></div>
+
+      <!-- Tools & Platforms -->
+      <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"/><span>Docker</span></div>
+      <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"/><span>Git</span></div>
+      <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg"/><span>Linux</span></div>
+      <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/debian/debian-original.svg"/><span>Debian</span></div>
+      <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain.svg"/><span>Ubuntu</span></div>
+      <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"/><span>VS Code</span></div>
+      <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg"/><span>NGINX</span></div>
+      <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg"/><span>Apache</span></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Contact Section -->
+<section class="contact-section" id="contact">
+  <div class="contact-container">
+
+    <!-- Contact Form -->
+    <div class="contact-card">
+      <h2 class="contact-title">Get in Touch</h2>
+      <p class="contact-subtext">Have something to discuss? Send me a message and let’s talk.</p>
+
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit" class="send-btn">✉️ Send Message</button>
+      </form>
+
+<div class="social-links">
+  <h3>Connect With Me</h3>
+  <div class="social-buttons">
+    <a href="https://github.com/Sklffy" class="social-link" target="_blank">
+      <i class="fab fa-github"></i> GitHub
+    </a>
+    <a href="https://linkedin.com/in/jdgeisler" class="social-link" target="_blank">
+      <i class="fab fa-linkedin"></i> LinkedIn
+    </a>
+  </div>
+</div>
+    </div>
+  </div>
 
   <!-- Footer -->
   <div class="footer">
     <p>© 2025 · JONATHAN GEISLER · ALL RIGHTS RESERVED</p>
     <a href="#top" class="scroll-top">↑ SCROLL TO TOP</a>
   </div>
+</section>
 
   <!-- JavaScript -->
   <script src="script.js"></script>
