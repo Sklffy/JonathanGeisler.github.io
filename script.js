@@ -17,10 +17,10 @@ tabButtons.forEach(button => {
 
 // ==================== TYPEWRITER ====================
 const phrases = [
-  "Cybersecurity Student",
-  "Blue Team Defender",
-  "CTF Competitor",
-  "Ethical Hacker in Training"
+  "Cybersecurity Student ",
+  "Blue Team Defender ",
+  "CTF Competitor ",
+  "Ethical Hacker in Training "
 ];
 
 const el = document.getElementById("typewriter");
