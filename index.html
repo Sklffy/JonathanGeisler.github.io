@@ -13,26 +13,35 @@
       cursor: url('assets/imgs/icons8-cursor-64.png'), auto;
     }
 
+#gridCanvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+
+}
+
   </style>
 </head>
 <body>
   <!-- Canvas Background -->
 <canvas id="gridCanvas"></canvas>
 
-
-  <!-- Header -->
-  <header>
-    <div class="container">
-      <nav>
-        <div class="logo">Jonathan Geisler</div>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <!-- Navbar -->
+    <nav class="navbar glassy-navbar">
+      <div class="nav-left">
+        <img src="Assets/imgs/Logo.png" alt="Logo" class="logo-image" />
+        <span class="logo-text">Jonathan Geisler</span>
+      </div>
+      <div class="nav-menu">
+        <a href="#" class="fas fa-home">Home</a>
+        <a href="#projects" class="fas fa-graduation-cap">Education</a>
+        <a href="#about" class="fas fa-user">About</a>
+        <a href="#contact" class="fas fa-envelope">Contact</a>
+      </div>
+    </nav>
 
 <!-- Hero Section -->
 <section class="hero">
