@@ -2,55 +2,60 @@
 
 Welcome to my personal portfolio site! This is a space where I showcase my background, projects, and skills as a Computer Science major specializing in Cybersecurity at Liberty University (Class of 2027).
 
-🌐 **Live Website**: https://sklffy.github.io/JonathanGeisler.github.io
+🌐 **Live Website:** [jdgeisler.com](https://sklffy.github.io/JonathanGeisler.github.io)
 
 ---
 
 ## 🧠 About Me
 
-I’m passionate about defending digital infrastructure and exploring both offensive and defensive security. I began my journey in cybersecurity when I witnessed a hack on my father's ministry website. Since then, I’ve been diving deep into:
+I'm passionate about defending digital infrastructure and exploring both offensive and defensive security. My journey began when I witnessed a hack on my father's ministry website. Since then, I've been diving deep into:
 
-- Linux hardening
-- Scoring engines
-- Proxmox cyber ranges
-- Network forensics
-- Blue team defense and red team tactics
+- 🛡️ Linux hardening
+- 🧪 Scoring engines
+- 🖥️ Proxmox cyber ranges
+- 🔍 Network forensics
+- 💙 Blue team defense & ❤️ red team tactics
 
-I participate in competitions like:
-- NCAE-C Cyber Games
+🕹️ I actively participate in cybersecurity competitions such as:
+- **NCAE-C Cyber Games**
+
 ---
 
-## 🚀 Projects
-🔒 DWAYNE-INATOR-5000 Custom Scoreboard & Proxmox Cyber Range
-A fully customized, Matrix-themed CTF scoreboard built for the DWAYNE-INATOR-5000, complete with glowing UI elements, animated Matrix canvas background, and dark red hacker aesthetics. Uses TOML-based configuration to score SSH, FTP, DNS, and Web services in real time.
+## 🚀 Featured Project
 
-Hosted on a Proxmox-powered datacenter running on my personal machine (AMD Ryzen 9 5950X, 96GB RAM, 20TB storage, RTX 3090 Ti).
+### 🔒 Atlantis — Custom Scoreboard & Cyber Range
 
-Scoring engine deployed in LXC containers with ZeroTier for remote connectivity.
-Integrated with custom Linux VMs ("deimos" and "eris") and real-world service configurations.
-GitHub-hosted, easily replicable, and styled to match a cyberpunk-themed competition aesthetic.
+A fully customized, Matrix-themed CTF scoreboard built for the DWAYNE-INATOR-5000, featuring:
 
-🔗 View Scoreboard on GitHub
-https://github.com/JimmyJonnyBonny/Scoreboard
+- 💡 Glowing UI and animated Matrix canvas background
+- ⚙️ Real-time service scoring (SSH, FTP, DNS, HTTP)
+- 🧾 TOML-based configuration and cyberpunk UI
+- 🖥️ Hosted on a **Proxmox-powered datacenter** running:
+  - AMD Ryzen 9 5950X
+  - 96GB RAM / 20TB storage
+  - RTX 3090 Ti
+
+Infrastructure uses **LXC containers**, ZeroTier for remote scoring, and custom Linux VMs (`deimos`, `eris`) styled for a cyberpunk competition aesthetic.
+
 
 ---
 
 ## 🛠 Tech Stack
 
-- **Languages**: Python, C++, Bash, JavaScript
-- **Tools**: Proxmox, ZeroTier, Vite, Flask, GitHub Pages
-- **Security**: auditd, tcpdump, iptables, OpenSSH
-- **Infra**: Docker, pfSense, Active Directory, Windows Server
+### 🔧 Languages & Tools
 
----
+![Python](https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=white&style=flat)
+![C++](https://img.shields.io/badge/-C++-00599C?logo=c%2B%2B&logoColor=white&style=flat)
+![Bash](https://img.shields.io/badge/-Bash-4EAA25?logo=gnu-bash&logoColor=white&style=flat)
+![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?logo=javascript&logoColor=black&style=flat)
+![HTML5](https://img.shields.io/badge/-HTML5-E34F26?logo=html5&logoColor=white&style=flat)
+![CSS3](https://img.shields.io/badge/-CSS3-1572B6?logo=css3&logoColor=white&style=flat)
 
-## 📫 Contact Me
+### 🧰 Tools, Infra & Security
 
-- 📧 Email: jdgeisler@gmail.com
-- 🧑‍💼 LinkedIn: [linkedin.com/in/jdgeisler](https://www.linkedin.com/in/jdgeisler/)
-- 💻 GitHub: [github.com/Sklffy](https://github.com/Sklffy)
-
----
-
-Thanks for visiting! ⚡  
-Feel free to fork this site, collaborate, or reach out.
+![Proxmox](https://img.shields.io/badge/-Proxmox-E57000?logo=proxmox&logoColor=white&style=flat)
+![ZeroTier](https://img.shields.io/badge/-ZeroTier-FFD500?logo=zerotier&logoColor=black&style=flat)
+![Docker](https://img.shields.io/badge/-Docker-2496ED?logo=docker&logoColor=white&style=flat)
+![Flask](https://img.shields.io/badge/-Flask-000000?logo=flask&logoColor=white&style=flat)
+![pfSense](https://img.shields.io/badge/-pfSense-212C4F?logoColor=white&style=flat)
+![GitHub Pages](https://img.shields.io/badge/-GitHub%20Pages-121013?logo=github&logoColor=white&styl)
