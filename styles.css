@@ -5,14 +5,14 @@
   box-sizing: border-box;
 }
 
+
 body {
   font-family: 'Inter', sans-serif;
-  background: linear-gradient(135deg, #0a0f2c, #151e3f, #1f2e75, #2535d0, #182faf);
-  background-attachment: fixed;
-  background-size: cover;
+  background: none;
   color: #ccd6f6;
   line-height: 1.6;
   overflow-x: hidden;
+  z-index: 0;
 }
 
 
@@ -20,12 +20,26 @@ body::before {
   content: '';
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
-  background-image: url('grid.svg');
-  opacity: 0.08;
+  background: linear-gradient(135deg, #0a0f2c, #151e3f, #1f2e75, #2535d0, #182faf);
+  background-size: cover;
+  opacity: 1;
   pointer-events: none;
   z-index: -2;
 }
 
+/* Place particles canvas in the background */
+#background-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+#particles-js {
+  pointer-events: none;
+}
 
 .container {
   max-width: 1200px;
@@ -137,7 +151,7 @@ header {
 
 /* HERO SECTION */
 .hero {
-  background: linear-gradient(135deg, #0a0f2c, #151e3f, #1f2e75, #2535d0, #182faf);
+  background: transparent;
   background-attachment: fixed;
   background-size: cover;
   padding: 4rem 2rem;
@@ -145,6 +159,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 0;
 }
 
 
@@ -367,7 +382,7 @@ body {
 /* Section Backgrounds */
 .education-section,
 .work-section {
-  background: linear-gradient(135deg, #0a0f2c, #151e3f, #1f2e75, #2535d0, #182faf);
+  background: transparent;
   background-attachment: fixed;
   background-size: cover;
   padding: 5rem 2rem;
@@ -569,7 +584,7 @@ body {
 
 /* Section Container */
 .section-tabs {
-  background: linear-gradient(135deg, #0a0f2c, #151e3f, #1f2e75, #2535d0, #182faf);
+  background: transparent;
   background-attachment: fixed;
   background-size: cover;
   padding: 4rem 2rem;
@@ -937,7 +952,7 @@ body {
 
 /* Contact Section */
 .contact-section {
-  background: linear-gradient(135deg, #0a0f2c, #151e3f, #1f2e75, #2535d0, #182faf);
+  background: transparent;
   background-attachment: fixed;
   background-size: cover;
   padding: 4rem 2rem;
@@ -1065,7 +1080,7 @@ body {
 .footer {
   text-align: center;
   padding: 2rem 1rem;
-  background: rgba(255, 255, 255, 0.03);
+  background: transparent;
   backdrop-filter: blur(8px);
   color: #cbd5e1;
   font-size: 0.9rem;
@@ -1102,3 +1117,5 @@ body {
               inset 0 0 6px rgba(255, 255, 255, 0.15);
   color: white;
 }
+
+

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="icon" href="Assets/imgs/logo.png" type="image/png">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jonathan Geisler</title>
@@ -10,23 +11,15 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
   <style>
     body {
-      cursor: url('assets/images/custom-cursor.png'), auto;
+      cursor: url('assets/imgs/icons8-cursor-48.png'), auto;     
     }
-
-#gridCanvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 0;
-  pointer-events: none;
-}
   </style>
 </head>
 <body>
-<canvas id="gridCanvas"></canvas>
-
+  <div id="background-wrapper">
+    <div id="particles-js">
+    </div>
+</div>
 <!-- Navbar -->
 <nav class="navbar glassy-navbar">
   <div class="nav-left">
@@ -310,7 +303,8 @@
   </div>
 </section>
 
-  <!-- JavaScript -->
+  <!-- JavaScript -->\
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
