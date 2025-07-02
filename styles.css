@@ -152,6 +152,7 @@ header {
 /* HERO SECTION */
 .hero {
   background: transparent;
+  flex-direction: column;
   background-attachment: fixed;
   background-size: cover;
   padding: 4rem 2rem;
@@ -160,6 +161,7 @@ header {
   align-items: center;
   justify-content: center;
   z-index: 0;
+  gap: 2rem;
 }
 
 
@@ -167,8 +169,7 @@ header {
 .hero-content {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  justify-content: center;
   gap: 4rem;
   max-width: 1400px;
   width: 100%;
@@ -380,6 +381,7 @@ body {
 }
 
 /* Section Backgrounds */
+@media (max-width: 768px) {
 .education-section,
 .work-section {
   background: transparent;
@@ -387,14 +389,14 @@ body {
   background-size: cover;
   padding: 5rem 2rem;
 }
-
+}
 /* Section Title */
 .section-title {
-  font-size: 2.8rem;
+  font-size: 2rem;
   font-weight: 900;
   text-align: center;
   color: #ffffff;
-  margin-bottom: 4rem;
+  margin-bottom: 2%;
   position: relative;
   text-shadow: 0 0 12px #64ffda, 0 0 24px #182faf;
 }
@@ -415,7 +417,7 @@ body {
   position: relative;
   max-width: 1200px;
   margin: auto;
-  padding: 2rem 0;
+  padding: 1rem 0;
 }
 
 .timeline::before {
