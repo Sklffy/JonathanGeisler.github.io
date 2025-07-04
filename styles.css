@@ -318,7 +318,7 @@ header {
 .typewriter {
   font-size: 2rem;
   font-family: 'Courier New', monospace;
-  color: #facc15; /* matches your theme yellow */
+  color: #facc15;
   font-weight: bold;
   white-space: nowrap;
   overflow: hidden;
