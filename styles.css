@@ -686,7 +686,21 @@ body {
   text-shadow: 0 0 12px #64ffda, 0 0 24px #182faf;
 }
 
+.tryhackme-badge {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  max-width: 100%;
+  overflow-x: hidden;
+}
 
+.tryhackme-badge iframe {
+  max-width: 100%;
+  width: 340px;
+  height: 135px;
+  border: none;
+  border-radius: 8px;
+}
 
 /* Tab content */
 .tab-content {
