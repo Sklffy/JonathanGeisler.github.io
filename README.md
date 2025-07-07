@@ -7,7 +7,7 @@ Welcome to my personal portfolio site! This is a space where I showcase my backg
 ---
 
 ## 🧠 About Me
-<iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=4607659" style='border:none;'></iframe>
+[![TryHackMe](https://tryhackme-badges.s3.amazonaws.com/46D7659.png)](https://tryhackme.com/p/jdgeisler)
 I'm passionate about defending digital infrastructure and exploring both offensive and defensive security. My journey began when I witnessed a hack on my father's ministry website. Since then, I've been diving deep into:
 
 - 🛡️ Linux hardening
