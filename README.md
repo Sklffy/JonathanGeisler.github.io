@@ -7,7 +7,6 @@ Welcome to my personal portfolio site! This is a space where I showcase my backg
 ---
 
 ## 🧠 About Me
-
 I'm passionate about defending digital infrastructure and exploring both offensive and defensive security. My journey began when I witnessed a hack on my father's ministry website. Since then, I've been diving deep into:
 
 - 🛡️ Linux hardening
@@ -52,7 +51,7 @@ Infrastructure uses **LXC containers**, ZeroTier for remote scoring, and custom 
 ![CSS3](https://img.shields.io/badge/-CSS3-1572B6?logo=css3&logoColor=white&style=flat)
 
 ### 🧰 Tools, Infra & Security
-
+[![TryHackMe](https://img.shields.io/badge/TryHackMe-red?logo=tryhackme&logoColor=white)](https://tryhackme.com/p/jdgeisler)
 ![Proxmox](https://img.shields.io/badge/-Proxmox-E57000?logo=proxmox&logoColor=white&style=flat)
 ![ZeroTier](https://img.shields.io/badge/-ZeroTier-FFD500?logo=zerotier&logoColor=black&style=flat)
 ![Docker](https://img.shields.io/badge/-Docker-2496ED?logo=docker&logoColor=white&style=flat)
